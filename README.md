@@ -32,7 +32,7 @@ npm install hexo-deployer-git --save
 
 # 报错问题
 
-## spawn failed
+## Spawn failed
 
 ### 1. 代理问题
 

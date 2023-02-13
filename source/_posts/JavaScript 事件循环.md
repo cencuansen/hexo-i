@@ -17,7 +17,7 @@ tags: JavaScript
 宏任务：IO、setTimeout、setInterval；
 微任务：Promise、process.nextTick、MutationObserver；
 
-# 浏览器
+# 浏览器环境
 
 1. 同步代码
 2. 一个宏任务
@@ -26,14 +26,16 @@ tags: JavaScript
 5. 全部微任务 + 新产生的微任务
 6. ...
 
-# Node.js
+# Node.js 环境
 
-timers 阶段：这个阶段执行 timer（setTimeout、setInterval）的回调
-I/O callbacks 阶段：处理一些上一轮循环中的少数未执行的 I/O 回调
-idle, prepare 阶段：仅 node 内部使用
-poll 阶段：重要且复杂的阶段，几乎所有 I/O 相关的回调，都在这个阶段执行
-check 阶段：执行 setImmediate() 的回调
-close callbacks 阶段：执行 socket 的 close 事件回调
+|阶段|说明|
+|-|-|
+|timers 阶段|这个阶段执行 timer(setTimeout、setInterval)的回调|
+|I/O callbacks 阶段|处理一些上一轮循环中的少数未执行的 I/O 回调|
+|idle, prepare 阶段|仅 node 内部使用|
+|poll 阶段|重要且复杂的阶段，几乎所有 I/O 相关的回调，都在这个阶段执行|
+|check 阶段|执行 setImmediate() 的回调|
+|close callbacks 阶段|执行 socket 的 close 事件回调|
 
 # 环境差异
 

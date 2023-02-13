@@ -1,5 +1,11 @@
 # cencuansen.github.io
 
+# 全局安装 hexo
+
+```bash
+npm i hexo-cli -g
+```
+
 # 新建文章
 
 ```
@@ -36,7 +42,8 @@ npm install hexo-deployer-git --save
 
 ### 1. 代理问题
 
-`kex_exchange_identification: Connection closed by remote host`，检查 git 代理，设置代理或者取消代理。
+问题：`kex_exchange_identification: Connection closed by remote host`
+解决：检查 git 代理，设置代理或者取消代理。
 
 设置代理
 

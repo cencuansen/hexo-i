@@ -34,7 +34,9 @@ npm install hexo-deployer-git --save
 
 ## spawn failed
 
-`kex_exchange_identification: Connection closed by remote host`，检查 git 代理，设置代理或者取消代理
+### 1. 代理问题
+
+`kex_exchange_identification: Connection closed by remote host`，检查 git 代理，设置代理或者取消代理。
 
 设置代理
 

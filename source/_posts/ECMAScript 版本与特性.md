@@ -81,6 +81,6 @@ tags: JavaScript
 
 # ES13/ES2022
 
-- Object.hasOwn
 - top-level await
+- Object.hasOwn
 - public & private(`#fieldname`) 成员修饰符

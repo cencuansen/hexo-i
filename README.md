@@ -61,6 +61,6 @@ git config --global --unset https.proxy
 
 ### 2. .deploy_git
 
-1. 删除.deploy_git 文件夹
-2. 输入 `git config --global core.autocrlf false`
+1. 删除 `.deploy_git` 文件夹
+2. 执行 `git config --global core.autocrlf false`
 3. 部署 `hexo cl & hexo g & hexo d`

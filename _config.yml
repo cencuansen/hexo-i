@@ -102,6 +102,6 @@ theme: "hexo-theme-Chic"
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:cencuansen/cencuansen.github.io.git
-  branch: master
+  - type: git
+    repo: https://github.com/cencuansen/cencuansen.github.io.git
+    branch: master

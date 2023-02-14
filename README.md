@@ -44,11 +44,12 @@ npm i hexo-deployer-git -S
 
 问题：`kex_exchange_identification: Connection closed by remote host`
 解决：检查 git 代理，设置代理或者取消代理。
+\_config.yml 中 deploy 中 repo 地址可以换成 https 格式。
 
 设置代理
 
 ```bash
-git config --global https.proxy http://127.0.0.1:1080
+git config --global http.proxy http://127.0.0.1:1080
 git config --global https.proxy https://127.0.0.1:1080
 ```
 

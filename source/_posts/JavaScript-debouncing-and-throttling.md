@@ -1,7 +1,12 @@
 ---
 title: JavaScript 防抖和节流
 date: 2023-02-13 20:35:59
-tags: JavaScript
+tags:
+  - JavaScript
+  - Closure
+  - Performance Optimization
+categories:
+  - JavaScript
 ---
 
 # 意义

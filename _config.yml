@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 📚
+title: 📚 SanHuo Blogs
 subtitle: 纤凝翠薇巅，扶光入苍渊，扶摇惊砂起，山弄望舒远
 description: ""
 keywords:
-author: sanhuo
-language: cn
+author: San Huo
+language: "zh-CN"
 timezone: "Asia/Shanghai"
 
 # URL

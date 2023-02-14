@@ -1,7 +1,11 @@
 ---
 title: JavaScript this
 date: 2023-02-13 19:54:25
-tags: JavaScript
+tags:
+  - JavaScript
+  - Function
+categories:
+  - JavaScript
 ---
 
 # 普通函数

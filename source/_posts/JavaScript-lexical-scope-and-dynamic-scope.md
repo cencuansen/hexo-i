@@ -1,7 +1,11 @@
 ---
 title: JavaScript 词法作用域和动态作用域
 date: 2023-02-13 21:40:43
-tags: JavaScript
+tags:
+  - JavaScript
+  - Function
+categories:
+  - JavaScript
 ---
 
 # 说明

@@ -1,30 +1,31 @@
 # Header
-navname: sanhuo blogs
+navname: 首页
+language: "zh-CN"
 
 # navigatior items
 nav:
-  Posts: /archives
-  Categories: /category
-  Tags: /tag
-  About: /about
+  # 归档: /archives
+  分类: /categories
+  标签: /tags
+  # 关于: /about
 
 # favicon
 favicon: /image/avatar-main.jpeg
 
 # Profile
-nickname: san huo
+nickname: "San Huo"
 
 ### this variable is MarkDown form.
 description: "纤凝翠薇巅，扶光入苍渊，扶摇惊砂起，山弄望舒远"
-avatar: /image/avatar-main.jpeg
+# avatar: /image/avatar-main.jpeg
 
 # main menu navigation
 ## links key words should not be changed.
 ## Complete url after key words.
 ## Unused key can be commented out.
 links:
-  Blog: /archives
-  #  Category:
+  # 归档: /archives
+  ">>> 进入博客 <<<": /categories
   #  Tags:
   #  Link:
   #  Resume:
@@ -36,29 +37,29 @@ links:
   # ZhiHu: https://www.zhihu.com/people/sirice
   #  LinkedIn:
   #  FaceBook:
-  #  Twitter:
-  #  Skype:
-  #  CodeSandBox:
-  #  CodePen:
-  #  Sketch:
-  #  Gitlab:
-  #  Dribble:
+  # Twitter:
+  # Skype:
+  # CodeSandBox:
+  # CodePen:
+  # Sketch:
+  # Gitlab:
+  # Dribble:
   # Instagram:
   # Reddit:
-  #  YouTube:
-  #  QQ:
-  #  Weibo:
-  #  WeChat:
-  Github: https://github.com/cencuansen
+  # YouTube:
+  # QQ:
+  # Weibo:
+  # WeChat:
+  # Github: https://github.com/cencuansen
 
 # how links show: you have 2 choice--text or icon.
-links_text_enable: false
-links_icon_enable: true
+links_text_enable: true
+links_icon_enable: false
 
 # Post page
 ## Post_meta
 post_meta_enable: true
-post_author_enable: true
+post_author_enable: false
 post_date_enable: true
 post_category_enable: true
 ## Post copyright
@@ -79,7 +80,7 @@ page_title_enable: true
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: MMMM D, YYYY
+date_format: YYYY年 MM月
 time_format: H:mm:ss
 
 # stylesheets loaded in the <head>

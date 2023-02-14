@@ -1,7 +1,11 @@
 ---
 title: JavaScript 闭包
 date: 2023-02-13 21:15:30
-tags: JavaScript
+tags:
+  - JavaScript
+  - Closure
+categories:
+  - JavaScript
 ---
 
 # 定义

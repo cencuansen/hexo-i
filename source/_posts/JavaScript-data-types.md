@@ -1,7 +1,11 @@
 ---
 title: JavaScript 数据类型
 date: 2023-02-08 13:52:29
-tags: JavaScript
+tags:
+  - JavaScript
+  - Data Types
+categories:
+  - JavaScript
 ---
 
 JavaScript 中：

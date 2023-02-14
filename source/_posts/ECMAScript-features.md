@@ -1,7 +1,12 @@
 ---
 title: ECMAScript 版本与特性
 date: 2023-02-13 14:44:00
-tags: JavaScript
+tags:
+  - JavaScript
+  - ECMAScript
+  - Features
+categories:
+  - JavaScript
 ---
 
 # ES6/ES2015

@@ -34,27 +34,27 @@ document.ready(
     // this script shouldn't be changed.
     () => {
         var _Blog = window._Blog || {};
-        const currentTheme = window.localStorage && window.localStorage.getItem('theme');
+        const currentTheme = window.localStorage && window.localStorage.getItem('theme') || "dark";
         const isDark = currentTheme === 'dark';
         const pagebody = document.getElementsByTagName('body')[0]
         if (isDark) {
             document.getElementById("switch_default").checked = true;
             // mobile
-            document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            document.getElementById("mobile-toggle-theme").innerText = " 🌙"
         } else {
             document.getElementById("switch_default").checked = false;
             // mobile
-            document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            document.getElementById("mobile-toggle-theme").innerText = " ☀️"
         }
         _Blog.toggleTheme = function () {
             if (isDark) {
                 pagebody.classList.add('dark-theme');
                 // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+                document.getElementById("mobile-toggle-theme").innerText = " 🌙"
             } else {
                 pagebody.classList.remove('dark-theme');
                 // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+                document.getElementById("mobile-toggle-theme").innerText = " ☀️"
             }
             document.getElementsByClassName('toggleBtn')[0].addEventListener('click', () => {
                 if (pagebody.classList.contains('dark-theme')) {
@@ -63,22 +63,22 @@ document.ready(
                     pagebody.classList.add('dark-theme');
                 }
                 window.localStorage &&
-                window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
+                    window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
             })
             // moblie
             document.getElementById('mobile-toggle-theme').addEventListener('click', () => {
                 if (pagebody.classList.contains('dark-theme')) {
                     pagebody.classList.remove('dark-theme');
                     // mobile
-                    document.getElementById("mobile-toggle-theme").innerText = "· Light"
+                    document.getElementById("mobile-toggle-theme").innerText = " ☀️"
 
                 } else {
                     pagebody.classList.add('dark-theme');
                     // mobile
-                    document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+                    document.getElementById("mobile-toggle-theme").innerText = " 🌙"
                 }
                 window.localStorage &&
-                window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
+                    window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
             })
         };
         _Blog.toggleTheme();

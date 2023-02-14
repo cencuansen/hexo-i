@@ -1,7 +1,11 @@
 ---
 title: JavaScript apply、bind、call
 date: 2023-02-13 20:53:10
-tags: JavaScript
+tags:
+  - JavaScript
+  - Function
+categories:
+  - JavaScript
 ---
 
 # 用途

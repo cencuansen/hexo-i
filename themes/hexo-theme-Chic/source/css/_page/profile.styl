@@ -2,6 +2,7 @@
 .profile-container
   justify-content center
   align-items center
+
 .intro
   text-align center
   .avatar
@@ -28,10 +29,23 @@
         -o-transform translateY(-0.75em)
         transform translateY(-0.75em)
         cursor pointer
+  .description
+    // position absolute
+    // top 40%
+    // left:  40%
+    // width: 100%
+    // font-size: 1.3rem
+    // writing-mode vertical-rl
+    text-shadow: 0 0 25px #fff
+    // animation: ani1 2.5s ease infinite alternate
   .links
     display flex
     flex-direction column
-
+@keyframes ani1 {
+  0% { top: 0; right: 10%; }
+  100% { top: 30px; right: 15%; }
+  // 100% { top: 15px;right: 10%; }
+}
 .nickname
   font-size 2em
   font-weight normal

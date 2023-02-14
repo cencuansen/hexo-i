@@ -1,12 +1,12 @@
 # cencuansen.github.io
 
-新建文章
+# 新建文章
 
 ```
 hexo new "new post title"
 ```
 
-本地运行
+# 本地运行
 
 ```bash
 hexo clean & hexo generate & hexo server
@@ -18,19 +18,19 @@ hexo clean & hexo generate & hexo server
 hexo cl & hexo g & hexo s
 ```
 
-发布
+# 发布
 
 ```bash
 hexo cl & hexo g & hexo d
 ```
 
-发布涉及到的库
+# 发布功能涉及到的库
 
 ```bash
 npm install hexo-deployer-git --save
 ```
 
-报错问题
+# 报错问题
 
 ## spawn failed
 

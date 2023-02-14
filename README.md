@@ -1,5 +1,11 @@
 # cencuansen.github.io
 
+# 全局安装 hexo
+
+```bash
+npm i hexo-cli -g
+```
+
 # 新建文章
 
 ```
@@ -24,19 +30,20 @@ hexo cl & hexo g & hexo s
 hexo cl & hexo g & hexo d
 ```
 
-# 发布功能涉及到的库
+# 发布功能所需库
 
 ```bash
-npm install hexo-deployer-git --save
+npm i hexo-deployer-git -S
 ```
 
 # 报错问题
 
-## spawn failed
+## Spawn failed
 
 ### 1. 代理问题
 
-`kex_exchange_identification: Connection closed by remote host`，检查 git 代理，设置代理或者取消代理。
+问题：`kex_exchange_identification: Connection closed by remote host`
+解决：检查 git 代理，设置代理或者取消代理。
 
 设置代理
 
@@ -54,6 +61,6 @@ git config --global --unset https.proxy
 
 ### 2. .deploy_git
 
-1. 删除.deploy_git 文件夹
-2. 输入 `git config --global core.autocrlf false`
+1. 删除 `.deploy_git` 文件夹
+2. 执行 `git config --global core.autocrlf false`
 3. 部署 `hexo cl & hexo g & hexo d`

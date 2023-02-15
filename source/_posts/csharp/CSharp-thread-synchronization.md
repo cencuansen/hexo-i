@@ -129,10 +129,10 @@ CLR 为堆内的对象分配同步索引，一个引用类型的同步索引不�
 
 ## lock 注意项
 
-不要锁定 this，用无意义的 object 更好；
-不要锁定一个类型对象，类型对象是全局的；
-不要锁定一个字符串，因为字符串可能被驻留，不同字符对象可能指向同一个字符串；
-不要使用[System.Runtime.CompilerServices.MethodImpl(MethodImplOptions.Synchronized)]，这个可以使用在方法上面，保证方法同一时刻只能被一个线程调用。它实质上是使用 lock 的，如果是实例方法，会锁定 this，如果是静态方法，则会锁定类型对象；
+别 lock this，无意义的 object 更好；
+别 lock 类型对象，类型对象是全局的；
+别 lock 字符串，因为字符串可能被驻留，不同字符对象可能指向同一个字符串；
+别用 MethodImplAttribute(MethodImplOptions.Synchronized)，它相当于去 lock 一个方法，实例方法 lock 的是 this，静态方法 lock 的是类型对象；
 
 # 可超时线程同步
 

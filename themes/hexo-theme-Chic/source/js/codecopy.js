@@ -24,13 +24,27 @@ document.ready(() => {
   });
 
   // Add copy to clipboard functionality and user feedback
+  var tempDiv;
   var clipboard = new ClipboardJS(".codecopy-btn", {
-    target: (trigger) => trigger.parentNode.querySelector(".code"),
+    target: (trigger) => {
+      tempDiv = document.createElement("div");
+      tempDiv.classList.add("temp-div");
+      tempDiv.innerHTML = trigger.parentNode.querySelector(".code").innerHTML;
+      tempDiv.style["position"] = "absolute";
+      tempDiv.style["top"] = "-9999px";
+      tempDiv.style["left"] = "-9999px";
+      document.body.appendChild(tempDiv);
+      return tempDiv;
+    },
   });
   var timer;
   clipboard.on("success", (e) => {
     e.clearSelection();
     e.trigger.innerHTML = "copied";
+    if (tempDiv) {
+      document.body.removeChild(tempDiv);
+      tempDiv = null;
+    }
     clearTimeout(timer);
     timer = setTimeout(() => {
       e.trigger.innerHTML = "copy";

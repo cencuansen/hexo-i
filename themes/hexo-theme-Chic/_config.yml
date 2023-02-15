@@ -25,7 +25,7 @@ description: "纤凝翠薇巅，扶光入沧渊，扶摇惊砂起，山弄望舒
 ## Unused key can be commented out.
 links:
   # 归档: /archives
-  "> 博客 <": /categories
+  "{{ hello world }}": /categories
   #  Tags:
   #  Link:
   #  Resume:

@@ -87,6 +87,7 @@ time_format: H:mm:ss
 stylesheets:
   - /css/style.css
   - /css/codecopy.css
+  - /css/foldcode.css
 
 # scripts loaded in the end of the body
 scripts:
@@ -94,8 +95,9 @@ scripts:
   - /js/tocbot.min.js
   - /js/clipboard.js
   - /js/codecopy.js
-    # tscanlin/tocbot: Build a table of contents from headings in an HTML document.
-    # https://github.com/tscanlin/tocbot
+  - /js/foldcode.js
+  # tscanlin/tocbot: Build a table of contents from headings in an HTML document.
+  # https://github.com/tscanlin/tocbot
 
 # plugin functions
 ## Mathjax: Math Formula Support

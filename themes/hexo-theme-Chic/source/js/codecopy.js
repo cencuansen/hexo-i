@@ -4,12 +4,21 @@ document.ready(() => {
     var copyHtml = `
       <span style class="codecopy-btn tooltipped-sw" aria-label="copy">copy</span>`;
 
+    function createElementFromHTML(htmlString) {
+        var div = document.createElement('div');
+        div.innerHTML = htmlString.trim();
+        // Change this to div.childNodes to support multiple top-level nodes.
+        return div.firstChild;
+    }
+
     snippets?.forEach(snippet => {
+        console.log("??");
         var table = snippet.querySelector("table");
         var thead = document.createElement('thead');
         table.tHead = thead;
         thead.style["position"] = "relative";
-        thead.innerHTML = copyHtml;
+        var spanElement = createElementFromHTML(copyHtml);
+        thead.appendChild(spanElement);
     });
 
     // Add copy to clipboard functionality and user feedback

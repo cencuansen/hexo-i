@@ -16,8 +16,8 @@ $highlight-purple       = #8959a8
 $highlight-gutter       = #869194
 
 .post-content {
-  figure.highlight {
-		margin: 0;
+    figure.highlight {
+		margin: 0.5rem 0;
 		background: $highlight-background;
 		color: $highlight-foreground;
 		font-size: 12px;
@@ -26,12 +26,23 @@ $highlight-gutter       = #869194
 		overflow-x: auto;
 
 		.gutter {
+			user-select: none;
 			color: $hight-gutter;
 		}
 
 		pre {
 			background: $highlight-background;
 			margin: 0;
+		}
+
+		tr.foldcode {
+			td.gutter {
+				display: none;
+			}
+
+			td.code span,br:nth-of-type(n+2) {
+				display: none;
+			}
 		}
 	}
 

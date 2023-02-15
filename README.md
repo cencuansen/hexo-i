@@ -8,8 +8,16 @@ npm i hexo-cli -g
 
 # 新建文章
 
-```
+```bash
 hexo new "new post title"
+```
+
+# 新建文章到指定路径下
+
+在 source\\\_posts\path1\path2\ 路径下创建名为 post-title 的文章：
+
+```bash
+hexo new "new post title" -p path1\\path2\\post-title.md
 ```
 
 # 本地运行

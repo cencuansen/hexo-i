@@ -7,10 +7,10 @@ categories:
 date: 2023-02-14 22:49:07
 ---
 
-# string.Empty、`""`、 null。
+# string.Empty、 "" 、 null。
 
 Empty 是 string 类中的一个静态的只读字段。
-string.Empty 和`""`是一样的。
+string.Empty 和 "" 是一样的。
 string str = null 表示 str 未指向任何对象。
 
 # string 和 StringBuilder

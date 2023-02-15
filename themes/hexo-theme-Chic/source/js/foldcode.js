@@ -7,22 +7,22 @@ document.ready(() => {
 
   var isFold = true;
   var foleCodeName = () => (isFold ? "unfold" : "fold");
-
+  var foldHtml = `<span style class="fold-btn" aria-label="${foleCodeName()}">${foleCodeName()}</span>`;
   var snippets = document.querySelectorAll("figure.highlight");
+
   snippets.forEach((snippet) => {
-    var table = snippet.querySelector("table");
+    snippet.style["position"] = "relative";
     if (isFold) {
-      table.classList.add("foldcode");
+      snippet.classList.add("foldcode");
     }
-    var foldHtml = `<span style class="fold-btn" aria-label="${foleCodeName()}">${foleCodeName()}</span>`;
-    var thead = table.querySelector("thead");
-    if (!thead) {
-      thead = document.createElement("thead");
-      table.tHead = thead;
-    }
-    thead.style["position"] = "relative";
+    // var table = snippet.querySelector("table");
+    // var thead = table.querySelector("thead");
+    // if (!thead) {
+    //   thead = document.createElement("thead");
+    //   table.tHead = thead;
+    // }
     var spanElement = createElementFromHTML(foldHtml);
-    thead.appendChild(spanElement);
+    snippet.appendChild(spanElement);
   });
 
   var foldBtns = document.querySelectorAll(".fold-btn");
@@ -31,12 +31,12 @@ document.ready(() => {
       if (e.target.innerHTML === "unfold") {
         // 展开
         isFold = false;
-        e.target.parentNode.parentNode.classList.remove("foldcode");
+        e.target.parentNode.classList.remove("foldcode");
         e.target.innerHTML = foleCodeName();
       } else {
         // 折叠
         isFold = true;
-        e.target.parentNode.parentNode.classList.add("foldcode");
+        e.target.parentNode.classList.add("foldcode");
         e.target.innerHTML = foleCodeName();
       }
     });

@@ -12,20 +12,20 @@ document.ready(() => {
   }
 
   snippets?.forEach((snippet) => {
-    var table = snippet.querySelector("table");
-    var thead = table.querySelector("thead");
-    if (!thead) {
-      thead = document.createElement("thead");
-      table.tHead = thead;
-    }
-    thead.style["position"] = "relative";
+    snippet.style["position"] = "relative";
+    // var table = snippet.querySelector("table");
+    // var thead = table.querySelector("thead");
+    // if (!thead) {
+    //   thead = document.createElement("thead");
+    //   table.tHead = thead;
+    // }
     var spanElement = createElementFromHTML(copyHtml);
-    thead.appendChild(spanElement);
+    snippet.appendChild(spanElement);
   });
 
   // Add copy to clipboard functionality and user feedback
   var clipboard = new ClipboardJS(".codecopy-btn", {
-    target: (trigger) => trigger.parentNode.parentNode.querySelector(".code"),
+    target: (trigger) => trigger.parentNode.querySelector(".code"),
   });
   var timer;
   clipboard.on("success", (e) => {

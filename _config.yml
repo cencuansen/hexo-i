@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SanHuo
-subtitle: 纤凝翠薇巅，扶光入沧渊，扶摇惊砂起，山弄望舒远
-description: "SanHuo的全栈藏经阁"
+title: SanHuo's Blog
+subtitle: ""
+description: "All About C# and JavaScript"
 keywords: "JavaScript,csharp,c#,.NET,.NET Core,MySQL"
 author: SanHuo
 language: "zh-CN"

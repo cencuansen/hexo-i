@@ -7,7 +7,7 @@ categories:
 date: 2023-02-14 22:49:07
 ---
 
-# string.Empty、 "" 、 null。
+# string.Empty、 "" 、 null
 
 Empty 是 string 类中的一个静态的只读字段。
 string.Empty 和 "" 是一样的。
@@ -137,7 +137,7 @@ CLR：公共语言运行库；
 - 引用命名空间。
 - using 一个非托管资源（IDisposiable），用来释放资源。
 
-# 托管资源、非托管资源
+# 托管资源和非托管资源
 
 托管资源指的是.NET 可以自动进行回收的资源，主要是指托管堆上分配的内存资源。
 非托管资源指的是.NET 不知道如何回收的资源，最常见的是包装操作系统资源的对象，例如文件，窗口，网络连接，数据库连接，画刷，图标等。
@@ -201,11 +201,11 @@ async 修饰的异步方法中无法使用；
 == 值类型数据比较的是值，引用类型比较的是引用地址。
 Equals 引用类型比较的是最终数据。
 
-# as 和 is
+# as、is、IsAssignableFrom
 
-is 判断对象是否兼容于某类型，返回 bool 值，永远不会抛出异常。
-as 用于在兼容的引用类型之间执行转换。无法转换则为 null。
-is 需要做两次对象的类型检查，而 as 需要做一次对象类型检查。
+as 用于在兼容的引用类型之间执行`类型转换`，无法转换则为 null；
+is 兼容性判断，返回 `bool 值`，不会抛出异常，语法：`实例对象 is 类型`；
+IsAssignableFrom 兼容性判断，返回 `bool 值`，不会抛出异常，语法：`类型.IsAssignableFrom(类型)`。
 
 # 访问修饰符
 
@@ -218,7 +218,7 @@ protected internal：受保护的内部成员，当前程序集或派生自包�
 private protected：私有受保护的成员，当前程序集中的包含类或从包含类派生的类型可访问；
 class 默认 internal，class member 默认 private。
 
-# class 成员、interface 成员
+# class、interface 成员
 
 class 成员：字段、常量、属性、方法、事件、运算符、索引器、构造函数、终结器、嵌套类型。
 interface 成员：方法、属性、索引器和事件
@@ -229,11 +229,13 @@ interface 成员：方法、属性、索引器和事件
 
 # 数据类型和内存占用
 
-1 byte bool、byte
-2 byte char、short
-4 byte int、float
-8 byte long、double
-16 byte decimal
+|    大小 | 成员         |
+| ------: | ------------ |
+|  1 byte | bool、byte   |
+|  2 byte | char、short  |
+|  4 byte | int、float   |
+|  8 byte | long、double |
+| 16 byte | decimal      |
 
 # 多态
 

@@ -242,4 +242,4 @@ var responseText = await response.Content.ReadAsStringAsync();
 ```
 
 HttpClient 存在 Dispose 后不能立即释放对应套接字问题，默认需要 4 分钟去释放。
-可以创建一个 HttpClient 实例，把它存储在一个静态字段中，或者使用 HttpClientFactory，[相关文章](url=https://www.oschina.net/news/77036/httpclient)。
+可以创建一个 HttpClient 实例，把它存储在一个静态字段中，或者使用 HttpClientFactory，[相关文章](https://www.oschina.net/news/77036/httpclient)。

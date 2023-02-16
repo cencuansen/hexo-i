@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: San Huo
+title: SanHuo
 subtitle: 纤凝翠薇巅，扶光入沧渊，扶摇惊砂起，山弄望舒远
-description: ""
-keywords:
-author: San Huo
+description: "SanHuo的全栈藏经阁"
+keywords: "JavaScript,csharp,c#,.NET,.NET Core,MySQL"
+author: SanHuo
 language: "zh-CN"
 timezone: "Asia/Shanghai"
 
@@ -105,3 +105,15 @@ deploy:
   - type: git
     repo: https://github.com/cencuansen/cencuansen.github.io.git
     branch: master
+
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  template:
+  template_txt:
+  rel: false
+  tags: true
+  categories: true
+baidusitemap:
+  path: baidusitemap.xml

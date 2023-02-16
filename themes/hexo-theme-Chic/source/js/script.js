@@ -86,3 +86,13 @@ document.ready(
         // ready function.
     }
 );
+
+document.ready(() => {
+    var snippets = document.querySelectorAll("figure.highlight");
+    if (!snippets) { return; }
+    snippets.forEach(snippet => {
+        var codeOps = document.createElement("div");
+        codeOps.classList.add("code-ops");
+        snippet.insertAdjacentElement("beforebegin", codeOps);
+    });
+});

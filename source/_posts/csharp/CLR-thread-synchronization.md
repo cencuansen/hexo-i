@@ -1,11 +1,11 @@
 ---
-title: CSharp 线程同步
+title: CLR 线程同步
 tags:
   - CLR
   - CSharp
   - Thread Synchronization
 categories:
-  - CSharp
+  - CLR
 date: 2023-02-15 10:27:06
 ---
 

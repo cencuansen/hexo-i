@@ -1,8 +1,10 @@
 .code-ops 
     z-index 1
     width 100%
+    color #000
     display flex
-    margin-bottom -10px
+    position relative
+    margin-bottom -43px
     flex-direction row-reverse
 .code-op
     width 60px
@@ -21,4 +23,7 @@ figure.highlight.code-fold
 .copy-code-temp
     top -9999px
     left -9999px
-    position absolute    
+    position absolute
+.highlight + .code-ops
+    // 如果两个代码块相邻，设置一下距离
+    margin-top 1em

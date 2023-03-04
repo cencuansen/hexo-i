@@ -61,5 +61,5 @@ wsl --shutdown
 注销
 
 ```bash
-wsl --unregister Ubuntu-22.04
+wsl --unregister CentOS7
 ```

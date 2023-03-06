@@ -1,7 +1,6 @@
 .code-ops 
     z-index 1
     width 100%
-    color #000
     display flex
     position relative
     margin-bottom -43px
@@ -29,3 +28,7 @@ figure.highlight.code-fold
 .highlight + .code-ops
     // 如果两个代码块相邻，设置一下距离
     margin-top 1em
+.dark-theme .code-ops
+    color $dark-font-color;
+
+

@@ -39,7 +39,7 @@ $highlight-gutter       = #869194
 
 	code {
 		padding: 2px 4px;
-		background: $highlight-background;
+		// background: $highlight-background;
 		font-family: Menlo,Monaco,Consolas,Courier New,monospace;
 		font-size: 12px;
 	}
@@ -47,7 +47,7 @@ $highlight-gutter       = #869194
 	pre {
 		padding: 10px;
 		overflow: auto;
-		background: $highlight-background;
+		// background: $highlight-background;
 		font-family: Menlo,Monaco,Consolas,Courier New,monospace;
 
 		code {
@@ -125,5 +125,15 @@ $highlight-gutter       = #869194
 			color: $highlight-purple;
 		}
 
+	}
+}
+
+.dark-theme {
+	figure.highlight {
+		background: #202020;
+		color: $dark-font-color;
+		pre {
+			background: #202020;
+		}
 	}
 }

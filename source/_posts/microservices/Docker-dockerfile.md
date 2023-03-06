@@ -132,13 +132,17 @@ Dockerfile 中只有最后一个 ENTRYPOINT 是有效指令。
 
 假设一个简单的场景：公司的服务器需要定期清理旧的日志文件。
 
-```bash clean_log 文件
+clean_log 文件：
+
+```bash
 #!/bin/bash
 echo "即将删除 $1 天前的日志文件"
 find /log_dir -ctime "$1" -name '*log' -exec rm {} \;
 ```
 
-```dockerfile dockerfile 文件
+dockerfile 文件：
+
+```dockerfile
 FROM ubuntu:14.04
 
 # 将 clean_log 脚本添加到镜像中
@@ -154,11 +158,15 @@ ENTRYPOINT ["/usr/bin/clean_log"]
 CMD ["7"]
 ```
 
-```bash 构建镜像
+构建镜像：
+
+```bash
 docker build -t log-cleaner .
 ```
 
-```bash 运行镜像
+运行镜像：
+
+```bash
 docker run -v /var/log/myapplogs:/log_dir log-cleaner 365
 ```
 
@@ -173,7 +181,9 @@ Dockerfile 中 RUN、CMD 和 ENTRYPOINT 都能够用于执行命令，下面是�
 
 ## RUN
 
-```dockerfile 错误写法
+错误写法：
+
+```dockerfile
 FROM debian:jessie
 RUN apt-get update
 RUN apt-get install -y gcc libc6-dev make
@@ -186,7 +196,9 @@ RUN make -C /usr/src/redis install
 
 该写法会创建 7 层镜像，这是完全没有意义的，而且很多运行时不需要的东西，都被装进了镜像里，比如编译环境、更新的软件包等等。结果就是产生非常臃肿、非常多层的镜像，不仅仅增加了构建部署的时间，也很容易出错。
 
-```dockerfile 合理写法
+合理写法：
+
+```dockerfile
 FROM debian:jessie
 RUN buildDeps='gcc libc6-dev make' \
   && apt-get update \
